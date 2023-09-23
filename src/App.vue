@@ -1,6 +1,14 @@
 <script setup>
 import {ref} from "vue";
 const count = ref(0);
+
+const addToCount = () => {
+  count.value = count.value + 1
+}
+
+const asubstractFromCount = () => {
+  count.value = count.value - 1
+}
 </script>
 
 <template>
@@ -8,8 +16,8 @@ const count = ref(0);
     <div>  
       <h4>The current count is ...</h4>
       <h1>{{count}}</h1>
-      <button @click="count--">-</button>
-      <button @click="count ++">+</button>
+      <button @click="asubstractFromCoun()">-</button>
+      <button @click="addToCount()">+</button>
     </div>
   </main>
 </template>
